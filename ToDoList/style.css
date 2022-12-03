@@ -1,0 +1,131 @@
+/* Initialisation des polices */
+@font-face {
+    font-family: "";
+    src: url();
+}
+
+/* Initialisation des couleurs */
+:root {
+    --main-color: #fff;
+    --main-bg-color: #000;
+}
+
+/* Initialisation de la mise en page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 800px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    text-decoration: underline;
+    text-align: center;
+    border: 2px solid darkblue;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+
+/* Main */
+main > div {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+/* Saisie utilisateur */
+.input {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid darkblue;
+    border-radius: 15px;
+    padding: 20px;
+    width: 60%;
+}
+
+#todo {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 15px;
+    resize: none;
+    height: 70px;
+}
+
+.input > input {
+    width: 30%;
+    padding: 7px 0;
+    align-self: center;
+    border-radius: 15px;
+    background-color: rgba(39, 39, 253, 0.918);
+    color: var(--main-color);
+}
+
+/* Gestion des erreurs de la saisie utilisateur */
+.bordererror {
+    border: 1px solid red;
+}
+.error {
+    color: red;
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.show {
+    display: inline;
+    padding-bottom: 8px;
+}
+
+form span {
+    display: none;
+}
+
+/* Date */
+.time {
+    border: 2px solid darkblue;
+    border-radius: 15px;
+    height: 1%;
+    padding: 20px;
+}
+
+.time > p {
+    padding: 5px 0;
+}
+
+/* To-Do Liste */
+main > div:last-child {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid darkblue;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#todolist {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#todolist div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+form input {
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+}

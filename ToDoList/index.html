@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TO-DO List</title>
+</head>
+<body>
+    <header>
+        <h1>TO-DO List</h1>
+    </header>
+
+    <main>
+        <div>
+            <form action="#" class="input">
+                <label for="todo">TO-DO</label>
+                <textarea name="todo" id="todo" placeholder="To-Do"></textarea>
+                <span class="error">Vous n'avez rien à faire ? (5 caractères minimum)</span>
+                <input type="button" value="Ajouter">
+            </form>
+
+            <div class="time">
+                <p><span id="date">&lt;date&gt;</span></p>
+                <p><span id="heure">&lt;heure&gt;</span></p>
+            </div>
+        </div>
+
+        <div>
+            <h2>To-Do List</h2>
+            <form action="#" id="todolist">
+                
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2022</p>
+         <p>Pierre Moritz</p>
+    </footer>
+
+    <script src="./scriptTime.js"></script>
+    <script src="./scriptToDo.js"></script>
+</body>
+</html>
