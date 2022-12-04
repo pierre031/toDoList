@@ -7,15 +7,11 @@ const todo = document.getElementById("todo");
 const submit = document.querySelector("input[type='button']");
 //Récupération du bloc todolist
 const todolist = document.getElementById("todolist");
-//Récupération du bonton Supprimer
-const remove = document.querySelector("input[type='reset']");
 
 //Ajout d'un événement lorsqu'on quitte le focus de la saisie
 todo.addEventListener("blur", checkToDo);
 //Ajout d'un évènement lors du click sur le bouton ajouter
 submit.addEventListener("click", checkForm);
-//Ajout d'un évènement lors du click sur le bouton supprimer
-remove.addEventListener("click", removeToDo);
 
 function checkToDo() {
   let isToDoOk = true;
@@ -73,7 +69,7 @@ function addToDo() {
   let supprimer = document.createElement("input");
 
   //Création de l'arborescence dans le DOM
-  todolist.appendChild(div);
+  todolist.prepend(div);
   div.appendChild(p);
   div.appendChild(div2);
   div2.appendChild(valider);
@@ -81,15 +77,35 @@ function addToDo() {
 
   //Ajout des attributs des boutons
   valider.setAttribute("type", "submit");
+  valider.setAttribute("id", "done");
   valider.setAttribute("value", "Valider");
   supprimer.setAttribute("type", "reset");
+  supprimer.setAttribute("id", "reset");
   supprimer.setAttribute("value", "Supprimer");
 
   //Ajout du texte saisie par l'utilisateur
   p.textContent = toDoInput;
-}
+  //Récupération du bouton Valider
+  const done = document.getElementById("done");
+  //Récupération du bonton Supprimer
+  const remove = document.getElementById("reset");
 
-/* function removeToDo() {
-  let asupprimer = remove.parentElement.parentElement;
-  asupprimer.setAttribute("style", "background-color:red");
-} */
+  //Ajout d'un évènement lors du click sur le bouton Valider
+  done.addEventListener("click", checkDone);
+  //Ajout d'un évènement lors du click sur le bouton supprimer
+  remove.addEventListener("click", removeToDo);
+
+  function checkDone() {
+    //Récupération du parent de 2° niveau (la div de la To-Do)
+    let toDone = done.parentNode.parentNode;
+    //Ajout de la classe .done pour ajouter la couleur de fond verte
+    toDone.classList.add("done");
+  }
+
+  function removeToDo() {
+    //Récupération du parent de 2° niveau (la div de la To-Do)
+    let toRemove = remove.parentNode.parentNode;
+    //Suppression de la div To-Do
+    toRemove.remove();
+  }
+}

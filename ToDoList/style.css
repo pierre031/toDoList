@@ -55,7 +55,6 @@ main > div {
     resize: none;
     height: 70px;
 }
-
 .input > input {
     width: 30%;
     padding: 7px 0;
@@ -115,8 +114,18 @@ main > div:last-child {
 #todolist div {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
+    margin: 10px 0;
+    padding-left: 5px;
+    border-radius: 15px;
+    transition: background-color 1000ms;
 }
+
+.done {
+    background-color: green;
+    color: var(--main-color);
+}
+
 
 form input {
     margin: 0 10px;
