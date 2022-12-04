@@ -67,6 +67,7 @@ function addToDo() {
   let p = document.createElement("p");
   let valider = document.createElement("input");
   let supprimer = document.createElement("input");
+  let hr = document.createElement("hr");
 
   //Création de l'arborescence dans le DOM
   todolist.prepend(div);
