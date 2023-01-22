@@ -1,8 +1,14 @@
-# toDoList
+ToDoList
+===============================
 
-Création d'une ToDo List simple avec affichage de la date et l'heure en cours
+Projet personnel
+--------------------------
+HTML/CSS/JS
+--------------------------
 
-Saisie de tâches à réaliser avec contrôles de la taille de caractères saisis
+* Création d'une appli ToDoList simple avec affichage de la date et de l'heure en cours
 
-Ajout de la tâche saisie à une liste
-Possibilité de valider un tâche effectuée et de la supprimer de la liste
+* Saisie de tâches à réaliser avec contôles du nombre de caractères saisis
+
+* Possibilité de valider une tâche effectuée et de la supprimer de la liste
+
